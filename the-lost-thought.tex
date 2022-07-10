@@ -1,34 +1,49 @@
 % xelatex
 % vim:set noet sts=0 sw=8 ts=8 tw=80:
-% \documentclass{article}
-\documentclass{artikel1}
-\usepackage[nobottomtitles*]{titlesec}
+\documentclass[oneside, a4paper]{book}
+% \usepackage[nobottomtitles*]{titlesec}
+\usepackage{hyperref}
+
+\usepackage{yfonts}
+\usepackage{lipsum}
+\usepackage{lettrine}
+\usepackage{GoudyIn}
+
+\usepackage[x11names]{xcolor} 
+\renewcommand{\LettrineFontHook}{\GoudyInfamily{}}
+\LettrineTextFont{\itshape}
+\setcounter{DefaultLines}{5}
+\setlength{\DefaultNindent}{0pt}
+\setlength{\DefaultFindent}{1pt}
 
 \author{SalahDin Ahmed Salh Rezk}
 \title{The Lost Thought}
 
 \begin{document}
 
+\frontmatter
 \maketitle
+\tableofcontents
 
-\begin{abstract}
-Here shall every writable thought of mine mere lost existence be. Considerable
-thoughts are what is the most valuable to any capable intellect. It shall
-neither be affected by what lies behind the collective nor the incapabilities of
-the individual. Thus, this does not try to be anything other than what it really
-is, to achieve — what I believe to be — the only noble goal to reach.
-\end{abstract}
+% \clearpage
+% Here shall every writable thought of mine mere lost existence be. Considerable
+% thoughts are what is the most valuable to any capable intellect. It shall
+% neither be affected by what lies behind the collective nor the incapabilities of
+% the individual. Thus, this does not try to be anything other than what it really
+% is, to achieve — what I believe to be — the only noble goal to reach.
 
-\section{The Collective}
-\textit{Before individuality}
+\mainmatter
 
-What I call ``The Collective" is the most effective yet the most harmful thing
-to the individuality of a human condition. It may achieve the greatness that no
-man can imagine, yet it actively chooses to not do a thing. Every day, the
-collective does not care of what truly matters, yet it is in a constant
-suffering for every failure it has experienced. Even if the failure was not of
-its conscious at that particular of an instance; it would torture itself till
-the point of absurdity.
+\chapter{The Collective}
+% \section{Before individuality}
+
+\lettrine{W}{hat} I call ``The Collective" is the most effective yet the most
+harmful thing to the individuality of a human condition. It may achieve the
+greatness that no man can imagine, yet it actively chooses to not do a thing.
+Every day, the collective does not care of what truly matters, yet it is in a
+constant suffering for every failure it has experienced. Even if the failure was
+not of its conscious at that particular of an instance; it would torture itself
+till the point of absurdity.
 
 The most risible to be seen of it is its ignorance. How confident it is just
 amusing to any intellect of a mind to think with. It does not think of the facts
@@ -36,7 +51,7 @@ that of the mind. Instead, it works by the guide of a lost heart. It celebrates
 the wrong, despises the right, and wonder what there is to be done in order to
 whiten the blood that covers the floors of innocence. It is to be considered the
 only clown of the entire circus of both unconscious and conscious existence of
-the whole. 
+the whole.
 
 The Collective, however, existed long before anything. It was the start and may
 be the end. It was the continuation and may be the interruption. It was nothing
@@ -61,11 +76,11 @@ thought and nonexistence.
 \section{The Self}
 \textit{Within The Collective}
 
-To not be the self is to tolerate the unfulfilling need for its completion with
-no act towards the desired existence to be. To not be the self is to wait for
-the unwaited victory of the nonexistence in the plane just like the
-incompletenesses of whatever lies inside one's condition. To not be the self is
-to not realize the agony of existence and what is beneath. Many of whom not
+To not be the self is to tolerate the unfulfilling need for its
+completion with no act towards the desired existence to be. To not be the self
+is to wait for the unwaited victory of the nonexistence in the plane just like
+the incompletenesses of whatever lies inside one's condition. To not be the self
+is to not realize the agony of existence and what is beneath. Many of whom not
 think, despite that, fail to recognize this factious implication. They do waste
 their existence to neither the whole nor what truly matters. Instead, they give
 every consciousness of existence, every intellect of mind, every notion of
@@ -220,5 +235,17 @@ so we assiduously know that freedom of whatever is could often be the solution
 to the suffering that may be. The way, therefore, is to use the finest balance
 between what is possible and what could be done by a thinking intellect of minds
 and whichever be.
+
+\chapter{The Soul}
+\section{Existence}
+
+\lettrine{E}{xistence} is what was given to ours with no permission. It is forced
+on us whether we wanted or not. You may hate it, desire it, force it upon
+others, or even take it — a very unwanted act of selfishness. Whatever your
+position is, you have no real control over its state. It is forced on all, even
+the unconscious. ``You feel, you exist" is what to be believed. You do not think
+to exist, you suffer to exist, you crumble to exist; you cruse your existence
+until it screams at you with nothing but pain, endless continuous pain of every
+possible sensation you intellect may feel.
 
 \end{document}
