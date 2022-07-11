@@ -1,0 +1,39 @@
+\usepackage{fancyhdr}
+
+\usepackage{fourier-orns}
+
+\newcommand{\ornamento}{\vspace{2em}\noindent {\hrulefill~ \raisebox{-2.5pt}[10pt][10pt]{\leafright \decofourleft \decothreeleft  \aldineright \decotwo \floweroneleft \decoone   \floweroneright \decotwo \aldineleft\decothreeright \decofourright \leafleft} ~  \hrulefill \\ \vspace{2em}}}
+\newcommand{\ornpar}{\noindent { \raisebox{-1.9pt}[10pt][10pt]{\leafright} \hrulefill \raisebox{-1.9pt}[10pt][10pt]{\leafright \decofourleft \decothreeleft  \aldineright \decotwo \floweroneleft \decoone}}}
+\newcommand{\ornimpar}{{\raisebox{-1.9pt}[10pt][10pt]{\decoone \floweroneright \decotwo \aldineleft \decothreeright \decofourright \leafleft} \hrulefill \raisebox{-1.9pt}[10pt][10pt]{\leafleft}}}
+
+\makeatletter
+\def\headrule{{\raisebox{-2.1pt}[10pt][10pt]{\leafright} \hrulefill \raisebox{-2.1pt}[10pt][10pt]{~~~\decofourleft \decotwo\decofourright~~~} \hrulefill \raisebox{-2.1pt}[10pt][10pt]{ \leafleft}}}
+\makeatother
+
+\fancyhf{}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+\newcommand{\estcab}[1]{\itshape{\nouppercase #1}}
+
+\fancyhead[LE]{\estcab{Fran Oldstyle}}
+\fancyhead[RE]{\estcab{History of taxonomy}}
+\fancyhead[CE,CO]{\estcab{\decoone}}
+\fancyhead[LO]{\estcab{\rightmark}}
+\fancyhead[RO]{\estcab{\leftmark}}
+
+\fancyfoot[LO]{
+    \ornimpar \\ \large \hfill \sffamily\bf {\leafNE ~~~ \thepage}
+}
+\fancyfoot[RE]{\ornpar   \\ \large  \sffamily\bf {\thepage ~~~ \reflectbox{\leafNE}}  \hfill}
+
+\pagestyle{fancy}
+
+% \renewcommand{\footnoterule}{\vspace{-0.5em}\noindent{\decosix \raisebox{2.9pt}{\line(1,0){100}} \lefthand} \vspace{.5em} }
+% \usepackage[hang,splitrule]{footmisc}
+% \addtolength{\footskip}{0.5cm}
+% \setlength{\footnotemargin}{0.3cm}
+% \setlength{\footnotesep}{0.4cm}
+
+
