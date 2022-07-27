@@ -21,18 +21,7 @@
 % \usepackage{wallpaper}
 \usepackage{background}
 \usepackage{ifoddpage}
-\backgroundsetup{
-	scale=1,
-	opacity=1,
-	angle=0,
-	contents={%
-		\ifoddpage
-			\includegraphics[width=\paperwidth]{images/border-double-odd.pdf}
-		\else
-			\includegraphics[width=\paperwidth]{images/border-double-even.pdf}
-		\fi
-	}
-}
+\backgroundsetup{contents={}}
 
 \usepackage{titlesec}
 \titleformat{\chapter}[display]
@@ -49,6 +38,19 @@
 \tableofcontents
 
 \chapter*{Introduction}
+
+\backgroundsetup{
+	scale=1,
+	angle=0,
+	contents={
+		\checkoddpage
+		\ifoddpage
+			\includegraphics[width=\paperwidth]{images/border-double-odd.pdf}
+		\else
+			\includegraphics[width=\paperwidth]{images/border-double-even.pdf}
+		\fi
+	}
+}
 
 % \CenterWallPaper{1}{images/border-double-odd.pdf}
 
