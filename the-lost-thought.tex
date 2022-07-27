@@ -1,12 +1,8 @@
 % xelatex
-% vim:set noet sts=0 sw=8 ts=8 tw=80:
+% vim:set noet sts=0 sw=2 ts=2 tw=80:
 \documentclass[twoside]{book}
 \usepackage[a4paper, inner=1.5in, outer=0.80in, bottom=2.5in]{geometry}
 % \usepackage[nobottomtitles*]{titlesec}
-
-% \let\origdoublepage\cleardoublepage
-% \newcommand{\clearemptydoublepage}{\clearpage{\pagestyle{empty}\origdoublepage}}
-% \let\cleardoublepage\clearemptydoublepage
 
 \usepackage{hyperref}
 
@@ -26,18 +22,16 @@
 \usepackage{background}
 \usepackage{ifoddpage}
 \backgroundsetup{
-scale=1,
-opacity=0.3,
-angle=0,
-color=black,
-contents={%
-\checkoddpage
-\ifoddpage
-\includegraphics[width=\paperwidth]{images/border-double-odd.pdf}
-\else
-\includegraphics[width=\paperwidth]{images/border-double-even.pdf}
-\fi
-}
+	scale=1,
+	opacity=1,
+	angle=0,
+	contents={%
+		\ifoddpage
+			\includegraphics[width=\paperwidth]{images/border-double-odd.pdf}
+		\else
+			\includegraphics[width=\paperwidth]{images/border-double-even.pdf}
+		\fi
+	}
 }
 
 \usepackage{titlesec}
@@ -49,8 +43,6 @@ contents={%
 \title{The Lost Thought}
 
 \begin{document}
-
-\NoBgThispage
 
 \frontmatter
 \maketitle
@@ -73,8 +65,6 @@ thought within a human condition.
 % This book, consequently, dives into the unexplored territories of thought.
 
 \mainmatter
-
-\BgThispage
 
 \chapter{The Collective}
 % \section{Before individuality}
