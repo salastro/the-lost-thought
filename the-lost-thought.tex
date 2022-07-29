@@ -17,11 +17,37 @@
 
 \usepackage{garamondlibre}
 
-% \input{fancy.tex}
-% \usepackage{wallpaper}
 \usepackage{background}
 \usepackage{ifoddpage}
 \backgroundsetup{contents={}}
+
+\newcommand{\mybg}{
+	\backgroundsetup{
+		scale=1,
+		angle=0,
+		contents={
+			\checkoddpage
+			\ifoddpage
+				\includegraphics[width=\paperwidth]{images/border-double-odd.pdf}
+			\else
+				\includegraphics[width=\paperwidth]{images/border-double-even.pdf}
+			\fi
+		}
+	}
+}
+
+\newcommand{\nobg}{
+	\backgroundsetup{contents={}}
+} 
+
+% \let\origdoublepage\cleardoublepage
+% \renewcommand{\cleardoublepage}{%
+%   \clearpage
+% 	\nobg
+%   \pagestyle{headings}
+% 	\origdoublepage
+% 	\mybg
+% }
 
 \usepackage{titlesec}
 \titleformat{\chapter}[display]
@@ -39,20 +65,15 @@
 
 \chapter*{Introduction}
 
-\backgroundsetup{
-	scale=1,
-	angle=0,
-	contents={
-		\checkoddpage
-		\ifoddpage
-			\includegraphics[width=\paperwidth]{images/border-double-odd.pdf}
-		\else
-			\includegraphics[width=\paperwidth]{images/border-double-even.pdf}
-		\fi
-	}
+\let\origdoublepage\cleardoublepage
+\renewcommand{\cleardoublepage}{%
+	\clearpage
+	\nobg
+	\pagestyle{headings}
+	\origdoublepage
+	\mybg
 }
-
-% \CenterWallPaper{1}{images/border-double-odd.pdf}
+\mybg
 
 % \section{Topic}
 
